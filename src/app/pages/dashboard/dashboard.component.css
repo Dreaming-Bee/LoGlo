@@ -1,0 +1,29 @@
+.pr-5{
+    padding-right: 6rem !important;
+}
+.custom-primary{
+    color:#37B6FF ;
+}
+.custom-h1{
+    font-size: 4rem;
+    font-family: "Kablammo", system-ui;
+    font-weight: 200;
+}
+.custom-h4{
+    font-weight: 400;
+    font-size: x-large;
+}
+.custom-p{
+    font-weight: 400;
+    color: gray;
+    font-size: large ;
+}
+.span-dot{
+    font-weight: 900;
+    font-size: xx-large;
+}
+.btn-primary{
+    height: 20%;
+    width: 30%;
+    font-weight: 500;
+}
