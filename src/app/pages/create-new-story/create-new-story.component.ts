@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-create-new-story',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './create-new-story.component.html',
-  styleUrl: './create-new-story.component.css'
+  styleUrls: ['./create-new-story.component.css']
 })
-export class CreateNewStoryComponent {
-
+export class CreateNewStoryComponent  {
   onCoverUpload(event: any): void {
     const file = event.target.files[0];
     if (file) {
@@ -20,4 +20,5 @@ export class CreateNewStoryComponent {
       reader.readAsDataURL(file);
     }
   }
+
 }

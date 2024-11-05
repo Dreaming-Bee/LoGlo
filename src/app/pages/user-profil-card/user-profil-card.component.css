@@ -1,0 +1,43 @@
+.card {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    object-fit: cover;
+    max-height: 10rem;
+    border-radius: 1vh;
+    border-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card .card-body {
+    padding: 1rem;
+  }
+  
+  .badge {
+    font-size: 0.9rem;
+  }
+  
+  .btn-outline-secondary.btn-sm {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .image-card-div{
+    background-color: #37B6FF ;
+    border-radius: 1vh;
+  }
+  
+  @media (max-width: 576px) {
+    .card-body {
+      text-align: center;
+    }
+    .d-flex {
+      justify-content: center;
+    }
+  }
+  @media (min-width: 576px) {
+    .image-card-div {
+        max-width: 12rem;
+    }
+}

@@ -1,15 +1,69 @@
-<div class="container">
-    <div class="row pt-5">
-        <div class="col pt-4 ms-3 ps-lg-4">
-            <h1 class="custom-primary custom-h1">Hi, we are LoGlo<span class="span-dot">.</span></h1>
-            <h4 class="custom-h4 mt-5">The world's best storytelling community</h4>
-            <p class="custom-p mt-4 ">Home to people who like to share their imagination with others through original stories, LoGlo has democratized storytelling for a new generation of diverse Gen Z writers and their fans</p>
+<div class="container-fluid mt-0">
+    <div class="row">
+        <header class="p-3 text-bg mt-0">
+            <div class="container-fluid mt-0">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <img src="image\Screenshot 2024-10-30 120821(12) (2).png" style="height: 88px;"
+                            alt="LoGlo">
+                    </a>
 
-            <div class="text-start mt-lg-5">
-                <button [routerLink]="'/sign-up'" type="button" class="btn btn-primary me-lg-3">start raeding</button>
-                <button [routerLink]="'/sign-up'" type="button" class="btn btn-primary">start writing</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle me-3" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Browse
+                        </button>
+                        <ul class="dropdown-menu ">
+                            <li><a [routerLink]="'/new-story'" class="dropdown-item">Create a new storie</a></li>
+                            <li><a class="dropdown-item" href="#">My stories</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="col-12 col-lg-7 mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control text-bg" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle me-3" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Write
+                        </button>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" [routerLink]="'/create-new-story'">Create a new storie</a></li>
+                            <li><a class="dropdown-item" href="#">My stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="text-end">
+                        <button [routerLink]="'/login'" type="button" class="btn btn-outline-white me-2">Login</button>
+                        <button type="button" class="btn btn-close-white">Sign-up</button>
+                    </div>
+                </div>
+                <hr class="mt-0">
+            </div>
+
+        </header>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col pt-4 pe-lg-4 me-lg-3 ps-lg-5">
+                    <h1 class="custom-primary custom-h1">Hi, we are LoGlo<span class="span-dot">.</span></h1>
+                    <h4 class="custom-h4 mt-5">The world's best storytelling community</h4>
+                    <p class="custom-p mt-4 ">Home to people who like to share their imagination with others through
+                        original stories, LoGlo has democratized storytelling for a new generation of diverse Gen Z
+                        writers and their fans</p>
+
+                    <div class="text-start mt-lg-5">
+                        <button [routerLink]="'/sign-up'" type="button" class="btn btn-primary me-lg-3">start
+                            raeding</button>
+                        <button [routerLink]="'/sign-up'" type="button" class="btn btn-primary">start writing</button>
+                    </div>
+                </div>
+                <div class="col"></div>
             </div>
         </div>
-        <div class="col"></div>
     </div>
+    <div class="row"></div>
 </div>
