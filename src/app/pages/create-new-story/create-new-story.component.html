@@ -1,0 +1,103 @@
+<div class="container py-4">
+    <div class="row">
+      <!-- Cover Image Section -->
+      <div class="col-lg-3 col-md-4 mb-4">
+        <div class="card">
+            <img src="https://via.placeholder.com/100x150" class="card-img-top" alt="Cover Image" id="cover-image">
+          <div class="card-body text-center">
+            <label for="cover-upload" class="btn btn-outline-secondary btn-sm">
+              Add a cover
+            </label>
+            <input type="file" id="cover-upload" class="d-none" (change)="onCoverUpload($event)">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Story Details Form -->
+      <div class="col-lg-9 col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-lg-0">Story Details</h5>
+            <hr class="title-divider">
+            <div class="form-group mb-3">
+              <label class="mb-1" for="title">Title</label>
+              <input type="text" class="form-control" id="title" placeholder="Untitled Story">
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="description">Description</label>
+              <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="main-characters">Main Characters</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="main-characters" placeholder="Name">
+                <button class="btn btn-outline-secondary" type="button">+</button>
+              </div>
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="category">Category</label>
+              <select class="form-select" id="category">
+                <option>Select category</option>
+                <option>Comedy</option>
+                <option>Horror</option>
+                <option>Thriller</option>
+                <option>Romance</option>
+              </select>
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="tags">Tags</label>
+              <input type="text" class="form-control" id="tags" placeholder="Add a tag">
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="audience">Target Audience</label>
+              <select class="form-select" id="audience">
+                <option>Who is your primary audience?</option>
+                <option>Young Adult (13 t0 18 years of age)</option>
+                <option>New Adult (18 t0 25 years of age)</option>
+                <option>Adult (25+ years of age)</option>
+              </select>
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="language">Language</label>
+              <select class="form-select" id="language">
+                <option>Language</option>
+                <option>English</option>
+                <option>Sinhala</option>
+                <option>Tamil</option>
+                <option>Other</option>
+              </select>
+              <!-- <input type="text" class="form-control" id="language" value="English" readonly> -->
+            </div>
+            
+            <div class="form-group mb-3">
+              <label class="mb-1" for="copyright">Copyright</label>
+              <select class="form-select" id="copyright">
+                <option>All Rights Reserved</option>
+                <option>Public domain</option>
+              </select>
+              <small class="mt-1" class="form-text text-muted">
+                You do not allow your work to be used or adapted in any way without your permission.
+              </small>
+            </div>
+            
+            <!-- <div class="form-group mb-3">
+              <label for="rating">Rating</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="rating">
+                <label class="form-check-label" for="rating">Mature</label>
+              </div>
+              <small class="form-text text-muted">
+                Your story is appropriate for all audiences. The LoGlo community has the ability to rate your story Mature.
+              </small>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  

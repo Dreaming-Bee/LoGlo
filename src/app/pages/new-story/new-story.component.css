@@ -1,0 +1,23 @@
+.title-input:focus {
+    outline: none;
+  }
+  .title-input{
+    display: flex;   
+    justify-content: center;      
+    text-align: center;    
+  }
+  .editor {
+    width: 60%;
+    display: flex;         
+    flex-direction: column;          
+    justify-content: center;      
+}
+.story-body{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;         
+    justify-content: center; 
+}
+.paragraph-input{
+    outline: none;
+}

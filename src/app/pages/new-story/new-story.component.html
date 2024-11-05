@@ -1,0 +1,39 @@
+<div class="editor-container">
+    <!-- Header Section -->
+    <div class="header d-flex justify-content-between align-items-center p-3">
+      <div class="back-btn">
+        <button class="btn btn-link">
+          <i class="bi bi-arrow-left"></i> <!-- Bootstrap icon for back arrow -->
+        </button>
+      </div>
+      <div class="story-title">
+        <!-- <span class="text-muted">Untitled Story</span> -->
+      </div>
+      <div class="buttons">
+        <button class="btn btn-dark me-2">Publish</button>
+        <button class="btn btn-outline-secondary me-2">Save</button>
+        <button class="btn btn-outline-secondary">Preview</button>
+      </div>
+    </div>
+  
+    <!-- Media Section -->
+    <div class="media-section text-center p-3 bg-light">
+      <button class="btn btn-light me-2">
+        <i class="bi bi-image "></i> <!-- Image icon -->
+      </button>
+      <button class="btn btn-light">
+        <i class="bi bi-camera-video"></i> <!-- Video icon -->
+      </button>
+    </div>
+  
+    <!-- Editor Section -->
+    <div class="story-body">
+    <div class="editor p-3">
+        <h1 class="title-input mb-2" contenteditable="true" (input)="updateTitle($event)" [innerText]="title" placeholder="Untitled Part 1"></h1>
+        <hr>
+        <p class="paragraph-input" contenteditable="true" (input)="updateParagraph($event)" placeholder="Type your text"[innerText]="paragraphText"></p>
+        <!-- (blur)="sendToBackend(paragraphText)" -->
+    </div>
+</div>
+</div>
+  

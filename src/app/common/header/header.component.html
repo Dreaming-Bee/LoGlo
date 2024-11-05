@@ -10,7 +10,7 @@
           Browse
         </button>
         <ul class="dropdown-menu ">
-          <li><a class="dropdown-item" href="#">Create a new storie</a></li>
+          <li><a [routerLink]="'/new-story'" class="dropdown-item" >Create a new storie</a></li>
           <li><a class="dropdown-item" href="#">My stories</a></li>
         </ul>
       </div>
@@ -24,7 +24,7 @@
           Write
         </button>
         <ul class="dropdown-menu ">
-          <li><a class="dropdown-item" href="#">Create a new storie</a></li>
+          <li><a class="dropdown-item" [routerLink]="'/create-new-story'">Create a new storie</a></li>
           <li><a class="dropdown-item" href="#">My stories</a></li>
         </ul>
       </div>
