@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { StoryService } from '../../service/story.service';
-import { HttpClientModule } from '@angular/common/http';
+// import { StoryService } from '../../service/story.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-new-story',
   standalone: true,
-  imports: [RouterLink, FormsModule, CommonModule, HttpClientModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './create-new-story.component.html',
   styleUrls: ['./create-new-story.component.css']
 })
@@ -18,10 +18,33 @@ export class CreateNewStoryComponent implements OnInit {
   newTag: any;
   selectedImage!: File;
 
+  public story :any={
+    title: "",
+    description: "",
+    postedBy: "",
+    img: "",
+    mCharacters: "",
+    category: "",
+    copyright: "",
+    language:"",
+    audience:"",
+    tags: []
+  }
+
+  public createStory(){
+    this.story.tags = this.tags;
+    this.http.post("http://localhost:8080/story/add-story",this.story).subscribe((data)=>{
+      console.log('Response from backend:', data);
+        alert("Story Added!!!!");
+    })
+  }
+  
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private storyService: StoryService
+    private http:HttpClient
+    // private storyService: StoryService
   ) {}
 
   ngOnInit() {
@@ -51,37 +74,11 @@ export class CreateNewStoryComponent implements OnInit {
     }
   }
 
-createStory(): void {
-    if (this.storyForm.valid) {
-      const formData = new FormData();
-      formData.append('title', this.storyForm.value.title);
-      formData.append('description', this.storyForm.value.description);
-      formData.append('mCharacters', this.storyForm.value.mCharacters);
-      formData.append('category', this.storyForm.value.category);
-      formData.append('copyright', this.storyForm.value.copyright);
-      formData.append('tags', JSON.stringify(this.tags));
-      if (this.selectedImage) {
-        formData.append('img', this.selectedImage);
-      }
-
-      this.storyService.createNewStory(formData).subscribe(
-        (response) => {
-          alert('Story added successfully');
-          this.router.navigate(['/new-story']);
-        },
-        (error) => {
-          alert('Error adding story');
-        }
-      );
-    } else {
-      alert('Please fill all required fields!');
-    }
-  }
-
 
   onCoverUpload(event: any): void {
     const file = event.target.files[0];
     if (file) {
+      this.selectedImage = file;
       const reader = new FileReader();
       reader.onload = (e: any) => {
         const coverImage = document.getElementById('cover-image') as HTMLImageElement;
@@ -91,11 +88,11 @@ createStory(): void {
     }
   }
 
-  submitForm(): void {
-    if (this.storyForm.valid) {
-      this.createStory();
-    } else {
-      alert("Please fill all required fields!")
-    }
-  }
+  // submitForm(): void {
+  //   if (this.storyForm.valid) {
+  //     this.createStory();
+  //   } else {
+  //     alert("Please fill all required fields!")
+  //   }
+  // }
 }
