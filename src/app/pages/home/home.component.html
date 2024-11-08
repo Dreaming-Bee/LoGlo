@@ -3,7 +3,11 @@
     <app-nav-bar></app-nav-bar>
   </div>
   <div class="row">
-    <app-book-card></app-book-card>
+
+    <div *ngFor="let card of storyList" class="col">
+      <app-book-card [storyInfo]="card"></app-book-card>
+    </div>
+    
   </div>
   <div class="row"></div>
 </div>

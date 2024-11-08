@@ -67,6 +67,7 @@
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: 1000; 
 }
 
 .card-preview .preview {
@@ -75,6 +76,7 @@
     background: #FFFFFF;
     position: relative;
     margin: 2rem;
+    z-index: 1001; 
 }
 
 .card-preview .preview.active {

@@ -96,3 +96,6 @@
 .forgot-password:hover {
     text-decoration: underline;
 }
+.error-message{
+    color: red;
+}

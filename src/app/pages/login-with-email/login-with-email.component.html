@@ -1,22 +1,23 @@
 <div class="container">
-    <div class="form-box">
-        <a [routerLink]="'/login'" class="back-link"> &lt; Back to all login options</a>
-        
-        <form action="#">
-            <div class="input-box">
-                <label for="email">Email or username</label>
-                <input type="text" id="email" placeholder="Email or username" />
-            </div>
-            
-            <div class="input-box">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Password" />
-                <a href="#" class="show-password">Show</a>
-            </div>
-            
-            <button type="submit" class="btn-login">Log in</button>
-            
-            <a href="#" class="forgot-password">Forgot password?</a>
-        </form>
-    </div>
+  <div class="form-box">
+    <h2>Login</h2>
+    <form (ngSubmit)="loginUser()">
+      <div class="input-box">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+
+      <div class="input-box">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        <a href="javascript:void(0)" (click)="togglePassword('password')" class="show-password">Show/Hide Password</a>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+      <button type="submit" [disabled]="!email || !password" class="btn-login">Login</button>
+
+      <a href="#" class="forgot-password">Forgot your password?</a>
+    </form>
+  </div>
 </div>

@@ -3,10 +3,17 @@
       <app-nav-bar></app-nav-bar>
     </div>
     <div class="row">
-        <div class="profile-header-container">
-            <div class="header-background">
-                
-            </div>
+      <div class="profile-header-container">
+        <div class="header-background">
+          <i class="bi bi-palette-fill" (click)="toggleColorPalette()"></i>
+          
+          <!-- Color Palette -->
+          <div class="color-palette" *ngIf="showPalette">
+            <div *ngFor="let color of colors" class="color-circle" [ngStyle]="{'background-color': color}" (click)="changeBackgroundColor(color)"></div>
+          </div>
+        </div>
+         
+          
           
             <div class="profile-content">
               <!-- Profile Picture -->

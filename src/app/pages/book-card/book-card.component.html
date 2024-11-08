@@ -1,11 +1,11 @@
-<div class="card" style="width: 18rem;" (click)="showPreview()">
+<div class="card mt-3" style="width: 18rem;" (click)="showPreview(storyInfo)">
     <img src="image\bubble-tea-anime-kgi3jc908rd4pise(1).jpg" class="card-img-top" alt="...">
     <div class="card-body mt-lg-0 pt-1 ">
-      <h6 class="card-title mt-lg-0 ">Card title</h6>
+      <h6 class="card-title mt-lg-0 ">{{storyInfo && storyInfo.title}}</h6>
     </div>
 </div>
 
-<div class="card-preview">
+<div *ngIf="selectedStory === storyInfo" class="card-preview">
     <div class="preview active d-flex">
         <div class="col gemba preview-image-dev">
             <img src="image\bubble-tea-anime-kgi3jc908rd4pise(1).jpg" alt="" class="preview-image">
@@ -21,7 +21,7 @@
                 <button type="button" class="btn btn-secondary btn-lg mt-3 ms-1"><i class="bi bi-plus-square"></i></button>
             </div>
             <div class="preview-para mt-lg-3">
-                <p class="preview-p mt-lg-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+                <p class="preview-p mt-lg-5">{{selectedStory?.description}}</p>
             </div>
             <div class="de-mortails mt-lg-4">
                 <h5 class="mt-lg-3 me-2">More details<i class="bi-chevron-right align-icon ms-3"></i></h5>
