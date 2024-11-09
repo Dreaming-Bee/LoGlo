@@ -1,7 +1,7 @@
 <div class="card mt-3" style="width: 18rem;" (click)="showPreview(storyInfo)">
     <img src="image\bubble-tea-anime-kgi3jc908rd4pise(1).jpg" class="card-img-top" alt="...">
     <div class="card-body mt-lg-0 pt-1 ">
-      <h6 class="card-title mt-lg-0 ">{{storyInfo && storyInfo.title}}</h6>
+      <h6 class="card-title mt-lg-0 ">{{storyInfo && storyInfo.title.substring(0, 16)  }}</h6>
     </div>
 </div>
 

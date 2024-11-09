@@ -82,6 +82,13 @@
 .card-preview .preview.active {
     display: inline-flex !important; 
 }
+.preview-para {
+    max-width: 100%;
+    word-wrap: break-word; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: normal; 
+  }
 .preview-p{
     text-align: justify;
 }

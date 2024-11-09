@@ -1,10 +1,15 @@
-/* Container styles */
+*{
+    padding: 0;
+    margin: 0; 
+}
+
 .container {
-    margin-top:5%;
+    margin-top:12%;
+    margin-left: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height: 50vh;
     background-color: #f4f4f4;
 }
@@ -18,8 +23,14 @@
     text-align: center;
     width: 100%;
     max-width: 400px;
+    transition: transform 0.8s ease;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
+/* .form-box:hover{
+    transform: rotate(-45deg); 
+    transition: transform 0.8s ease;
+} */
 .form-box h2 {
     margin-bottom: 20px;
     font-size: 1.8rem;
