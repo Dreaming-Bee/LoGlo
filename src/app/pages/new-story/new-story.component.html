@@ -30,6 +30,9 @@
     <div class="story-body">
     <div class="editor p-3">
         <h1 class="title-input mb-2" contenteditable="true" (input)="updateTitle($event)" [innerText]="title" placeholder="Untitled Part 1"></h1>
+        <div class="p-1">
+          <app-text-editor></app-text-editor>
+        </div>
         <hr>
         <p class="paragraph-input" contenteditable="true" (input)="updateParagraph($event)" placeholder="Type your text"[innerText]="paragraphText"></p>
         <!-- (blur)="sendToBackend(paragraphText)" -->

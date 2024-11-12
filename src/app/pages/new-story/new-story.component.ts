@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TextEditorComponent } from '../../assets/text-editor/text-editor.component';
 
 @Component({
   selector: 'app-new-story',
   standalone: true,
-  imports: [],
+  imports: [TextEditorComponent],
   templateUrl: './new-story.component.html',
   styleUrl: './new-story.component.css'
 })
