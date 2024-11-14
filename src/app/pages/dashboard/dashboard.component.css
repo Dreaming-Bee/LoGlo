@@ -1,3 +1,6 @@
+.ct1{
+    height: 100vh;
+}
 .pr-5{
     padding-right: 6rem !important;
 }
@@ -8,6 +11,7 @@
     font-size: 4rem;
     font-family: "Kablammo", system-ui;
     font-weight: 200;
+    text-shadow: 0 4px 8px rgba(111, 66, 235, 0.2);
 }
 .custom-h4{
     font-weight: 400;
@@ -23,10 +27,80 @@
     font-size: xx-large;
 }
 .btn-primary{
+    background-color: #37B6FF;
+    border-color: #37B6FF;
     height: 20%;
     width: 30%;
     font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+hr{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/*==================================================== ct-2===================================================== */
+
+.ct2{
+    height: 100vh;
+    background-color: rgba(169, 169, 169, 0.15);
+}
+.ct2title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: "Kablammo", system-ui;
+    font-weight: 300;
+    color: rgba(212, 212, 212, 0.092);
+}
+.ct2dis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: "Kablammo", system-ui;
+    font-weight: 400;
+    color: rgb(34, 34, 34, 0.8);
+}
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.step-number-div{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.step-number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #37B6FF;
+    margin-bottom: 10px;
+    font-family: "Kablammo", system-ui;
+    font-weight: 300;
 }
 
-/*==================================================== curser===================================================== */
+.step-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
+.step-description {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.step-stat {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+.jc{
+    display: flex;
+    align-items: center;
+
+}
