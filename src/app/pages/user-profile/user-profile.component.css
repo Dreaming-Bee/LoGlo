@@ -15,6 +15,12 @@
     position: relative;
     margin-top: -75px;
   }
+
+  .profile-picture {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+  }
   
   /* Profile Picture */
   .profile-picture img {
